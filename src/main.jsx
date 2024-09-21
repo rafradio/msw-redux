@@ -4,6 +4,7 @@ import {RouterProvider} from "react-router-dom";
 import {Provider} from "react-redux";
 import App from './App.jsx'
 import './index.css'
+import './App.css'
 import { store } from "./store/store.js";
 import { router } from "./routes/routes.jsx";
 
