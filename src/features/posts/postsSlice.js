@@ -1,7 +1,7 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit'
 import { nanoid } from '@reduxjs/toolkit'
 import { sub } from 'date-fns'
-import { fetchPosts } from './actions'
+import { fetchPosts, fetchPostsDb } from './actions'
 
 
 const initialReactions = {
@@ -37,6 +37,12 @@ const postsSlice = createSlice({
         builder
             .addCase(fetchPosts.fulfilled, (state, action) => {
                 action.payload.forEach(element => {
+                    state.posts.push(element)
+                });
+            })
+            .addCase(fetchPostsDb.fulfilled, (state, action) => {
+                action.payload.forEach(element => {
+                    console.log("Проверяем DB запрос", element);
                     state.posts.push(element)
                 });
             })

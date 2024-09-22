@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom'
 import { useDispatch, useSelector } from 'react-redux'
 import { selectUsers } from '../store/selectors'
 import { Navbar } from './NavBar'
-import { fetchPosts } from '../features/posts/actions'
+import { fetchPosts, fetchPostsDb } from '../features/posts/actions'
 // import './App.css'
 
 export const LoginPage = () => {
@@ -13,7 +13,7 @@ export const LoginPage = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        // dispatch(fetchPosts())
+        dispatch(fetchPostsDb())
         navigate('/posts');
     }
 

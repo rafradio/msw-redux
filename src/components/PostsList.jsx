@@ -7,7 +7,7 @@ import { fetchPosts } from '../features/posts/actions';
 
 export const PostsList = () => {
     const posts = useSelector(selectPosts);
-    // const entt = useSelector(selectEntities);
+    const entt = useSelector(selectEntities);
     const dispatch = useDispatch();
 
     if (!posts) {
