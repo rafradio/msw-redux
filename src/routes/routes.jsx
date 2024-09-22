@@ -15,5 +15,5 @@ export const router = createBrowserRouter([
         element: <PostsList/>,
         children: [
         ]
-      },
+    },
 ]);

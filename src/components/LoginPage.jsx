@@ -13,7 +13,7 @@ export const LoginPage = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        dispatch(fetchPosts())
+        // dispatch(fetchPosts())
         navigate('/posts');
     }
 
